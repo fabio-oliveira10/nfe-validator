@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<NFe>
+    <infNFe>
+
+        <ide>
+            <cUF>35</cUF>
+            <natOp>VENDA DE MERCADORIA</natOp>
+            <mod>55</mod>
+            <serie>1</serie>
+            <nNF>12345</nNF>
+            <dhEmi>2026-06-19T10:00:00-03:00</dhEmi>
+        </ide>
+
+        <emit>
+            <CNPJ>11444777000161</CNPJ>
+            <xNome>EMPRESA TESTE LTDA</xNome>
+            <IE>123456789</IE>
+        </emit>
+
+        <dest>
+            <CNPJ>27865757000102</CNPJ>
+            <xNome>CLIENTE TESTE LTDA</xNome>
+        </dest>
+
+        <det nItem="1">
+            <prod>
+                <cProd>001</cProd>
+                <xProd>Notebook</xProd>
+                <NCM>99999999</NCM>
+                <CFOP>5102</CFOP>
+                <uCom>UN</uCom>
+                <qCom>2.0000</qCom>
+                <vUnCom>2500.00</vUnCom>
+                <vProd>5000.00</vProd>
+            </prod>
+        </det>
+
+        <total>
+            <ICMSTot>
+                <vProd>5000.00</vProd>
+                <vNF>5000.00</vNF>
+            </ICMSTot>
+        </total>
+
+    </infNFe>
+</NFe>

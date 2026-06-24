@@ -1,0 +1,8 @@
+file,status,errors
+nfe_campo_ausente.xml,ERROR,Notebook: CFOP não informado.
+nfe_cfop_invalido.xml,ERROR,Notebook: CFOP 9999 inválido.
+nfe_cnpj_invalido.xml,OK,
+nfe_ncm_ausente.xml,ERROR,Notebook: NCM não informado.
+nfe_ncm_invalido.xml,ERROR,Notebook: NCM 99999999 inválido.
+nfe_ok.xml,OK,
+nfe_total_divergente.xml,ERROR,Divergência de total: diferença 1000.00
