@@ -1,5 +1,6 @@
 import csv
 from pathlib import Path
+from openpyxl import Workbook
 
 
 def export_to_csv(results, output_path):
@@ -10,10 +11,47 @@ def export_to_csv(results, output_path):
         writer.writerow(["file", "status", "errors"])
 
         for result in results:
-            writer.writerow(
+            if len(result["errors"]) == 0:
+                writer.writerow(
+                    [
+                        result["file"],
+                        result["status"],
+                        "",
+                    ]
+                )
+            else:
+                for error in result["errors"]:
+                    writer.writerow(
+                        [
+                            result["file"],
+                            result["status"],
+                            error,
+                        ]
+                    )
+
+
+def export_to_excel(results, output_path):
+    workbook = Workbook()
+    sheet = workbook.active
+    sheet.append(["file", "status", "errors"])
+
+    for result in results:
+        if len(result["errors"]) == 0:
+            sheet.append(
                 [
                     result["file"],
                     result["status"],
-                    "; ".join(result["errors"]),
+                    "",
                 ]
             )
+        else:
+            for error in result["errors"]:
+                sheet.append(
+                    [
+                        result["file"],
+                        result["status"],
+                        error,
+                    ]
+                )
+
+    workbook.save(output_path)
