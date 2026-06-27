@@ -4,7 +4,6 @@ Aplicação desenvolvida em Python para automatizar a leitura de arquivos XML de
 
 O projeto foi criado para praticar automação aplicada à área Fiscal, estruturando um fluxo completo de processamento de documentos fiscais, desde a leitura do XML até a geração de relatórios para apoio à conferência.
 
----
 
 ## Visão Geral
 
@@ -12,7 +11,6 @@ A aplicação percorre automaticamente uma pasta contendo arquivos XML de NF-e, 
 
 Ao final da execução, são gerados arquivos CSV e Excel contendo todas as inconsistências identificadas, além de um resumo estatístico da análise.
 
----
 
 ## Escopo Atual
 
@@ -20,7 +18,6 @@ O projeto foi desenvolvido utilizando arquivos XML simplificados para fins de es
 
 As validações implementadas representam regras básicas de conformidade fiscal e servem como base para futuras evoluções, como validações oficiais de CNPJ, leitura de SPED e cruzamento entre documentos fiscais.
 
----
 
 ## Funcionalidades
 
@@ -47,7 +44,6 @@ As validações implementadas representam regras básicas de conformidade fiscal
 * Organização das inconsistências por regra fiscal
 * Resumo estatístico da execução
 
----
 
 ## Fluxo da Aplicação
 
@@ -70,7 +66,6 @@ Consolidação dos Erros
 Relatórios CSV e Excel
 ```
 
----
 
 ## Tecnologias Utilizadas
 
@@ -82,7 +77,6 @@ Relatórios CSV e Excel
 | CSV         | Geração do relatório em CSV       |
 | OpenPyXL    | Geração do relatório em Excel     |
 
----
 
 ## Estrutura das Informações Geradas
 
@@ -103,7 +97,6 @@ Ao final da execução, também são apresentados:
 * Taxa de aprovação
 * Quantidade de erros por tipo de validação
 
----
 
 ## Regras de Validação
 
@@ -117,7 +110,6 @@ Durante o processamento dos XMLs são realizadas verificações como:
 * Validação básica do tamanho do CNPJ
 * Tratamento de campos obrigatórios ausentes
 
----
 
 ## Desafios Resolvidos
 
@@ -128,7 +120,6 @@ Durante o processamento dos XMLs são realizadas verificações como:
 * Geração automatizada de relatórios em múltiplos formatos
 * Consolidação estatística dos resultados da auditoria
 
----
 
 ## Como Executar
 
@@ -148,7 +139,6 @@ Os arquivos XML devem ser colocados na pasta `data/input`.
 
 Após a execução, os relatórios são gerados automaticamente na pasta `data/output`.
 
----
 
 ## Possíveis Evoluções
 
@@ -159,7 +149,6 @@ Após a execução, os relatórios são gerados automaticamente na pasta `data/o
 * [ ] Dashboard para acompanhamento das validações
 * [ ] Utilização de Pandas para análise dos resultados
 
----
 
 ## Autor
 
