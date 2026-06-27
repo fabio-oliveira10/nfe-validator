@@ -11,6 +11,26 @@ A aplicação percorre automaticamente uma pasta contendo arquivos XML de NF-e, 
 
 Ao final da execução, são gerados arquivos CSV e Excel contendo todas as inconsistências identificadas, além de um resumo estatístico da análise.
 
+## Estrutura do Projeto
+
+```text
+nfe-validator/
+│
+├── data/
+│   ├── input/
+│   └── output/
+│
+├── src/
+│   ├── config/
+│   ├── parser/
+│   ├── reports/
+│   └── validators/
+│
+├── main.py
+├── README.md
+└── requirements.txt
+```
+
 
 ## Escopo Atual
 
