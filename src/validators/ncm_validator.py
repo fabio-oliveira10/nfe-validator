@@ -9,9 +9,24 @@ def validate_ncm(nfe_data):
         ncm = product["product_ncm"]
 
         if ncm is None:
-            errors.append(f"{product['product_name']}: NCM não informado.")
+            errors.append(
+                {
+                    "rule": "NCM",
+                    "field": "NCM",
+                    "target": product["product_name"],
+                    "message": "NCM não informado.",
+                }
+            )
             continue
+
         if not any(ncm.startswith(prefix) for prefix in VALID_NCM_PREFIXES):
-            errors.append(f"{product['product_name']}: NCM {ncm} inválido.")
+            errors.append(
+                {
+                    "rule": "NCM",
+                    "field": "NCM",
+                    "target": product["product_name"],
+                    "message": f"NCM {ncm} inválido.",
+                }
+            )
 
     return errors

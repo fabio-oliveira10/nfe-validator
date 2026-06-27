@@ -1,5 +1,5 @@
 from pathlib import Path
-
+from collections import Counter
 from src.parser.nfe_parser import get_xml_root, parse_nfe
 from src.validators.total_validator import validate_nfe_totals
 from src.validators.cfop_validator import validate_cfop
@@ -42,6 +42,12 @@ for file in xml_files:
 
 export_to_csv(results, "data/output/inconsistencias.csv")
 export_to_excel(results, "data/output/inconsistencias.xlsx")
+error_counter = Counter()
+
+for result in results:
+    for error in result["errors"]:
+        error_counter[error["rule"]] += 1
+
 
 
 total_files = len(results)
@@ -55,3 +61,7 @@ print(f"Total de arquivos: {total_files}")
 print(f"OK: {ok_files}")
 print(f"ERROR: {error_files}")
 print(f"Taxa de aprovação: {success_rate:.2f}%")
+print("\nERROS POR TIPO")
+
+for rule, quantity in error_counter.items():
+    print(f"{rule}: {quantity}")

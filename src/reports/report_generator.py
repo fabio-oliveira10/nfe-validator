@@ -1,5 +1,6 @@
 import csv
 from pathlib import Path
+
 from openpyxl import Workbook
 
 
@@ -8,7 +9,8 @@ def export_to_csv(results, output_path):
 
     with file_path.open(mode="w", newline="", encoding="utf-8") as file:
         writer = csv.writer(file)
-        writer.writerow(["file", "status", "errors"])
+
+        writer.writerow(["file", "status", "rule", "field", "target", "message"])
 
         for result in results:
             if len(result["errors"]) == 0:
@@ -16,6 +18,9 @@ def export_to_csv(results, output_path):
                     [
                         result["file"],
                         result["status"],
+                        "",
+                        "",
+                        "",
                         "",
                     ]
                 )
@@ -25,7 +30,10 @@ def export_to_csv(results, output_path):
                         [
                             result["file"],
                             result["status"],
-                            error,
+                            error["rule"],
+                            error["field"],
+                            error["target"],
+                            error["message"],
                         ]
                     )
 
@@ -33,7 +41,8 @@ def export_to_csv(results, output_path):
 def export_to_excel(results, output_path):
     workbook = Workbook()
     sheet = workbook.active
-    sheet.append(["file", "status", "errors"])
+
+    sheet.append(["file", "status", "rule", "field", "target", "message"])
 
     for result in results:
         if len(result["errors"]) == 0:
@@ -41,6 +50,9 @@ def export_to_excel(results, output_path):
                 [
                     result["file"],
                     result["status"],
+                    "",
+                    "",
+                    "",
                     "",
                 ]
             )
@@ -50,7 +62,10 @@ def export_to_excel(results, output_path):
                     [
                         result["file"],
                         result["status"],
-                        error,
+                        error["rule"],
+                        error["field"],
+                        error["target"],
+                        error["message"],
                     ]
                 )
 
