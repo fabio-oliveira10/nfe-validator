@@ -34,7 +34,7 @@ nfe-validator/
 
 ## Escopo Atual
 
-O projeto foi desenvolvido utilizando arquivos XML simplificados para fins de estudo e demonstração.
+O projeto utiliza documentos fiscais eletrônicos simulados para fins educacionais, permitindo o desenvolvimento e a validação das regras de negócio sem a utilização de dados reais.
 
 As validações implementadas representam regras básicas de conformidade fiscal e servem como base para futuras evoluções, como validações oficiais de CNPJ, leitura de SPED e cruzamento entre documentos fiscais.
 
