@@ -52,8 +52,8 @@ As validações implementadas representam regras básicas de conformidade fiscal
 ### Validações Fiscais
 
 * Validação de CFOP
-* Validação de NCM
-* Validação básica de CNPJ
+* Verificação do formato do NCM
+* Validação estrutural de CNPJ (presença e formato)
 * Conferência entre o total da nota e a soma dos produtos
 * Tratamento de campos obrigatórios ausentes
 
@@ -131,7 +131,7 @@ Durante o processamento dos XMLs são realizadas verificações como:
 * Tratamento de campos obrigatórios ausentes
 
 
-## Desafios Resolvidos
+## Aspectos Técnicos Implementados
 
 * Organização do projeto em módulos independentes
 * Leitura estruturada de arquivos XML
